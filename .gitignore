@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+api.log
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Gaussian Splat data files (large binary, not for version control)
+public/splats/*.ply
+public/splats/*.splat
+public/splats/*.ksplat
+public/splats/*.spz
+public/splats-compressed/
+
+# Thumbnails (auto-generated when saving camera views)
+public/thumbnails/
+
+# Uploads directory (temporary)
+public/uploads/
+
+# Python virtual environment
+.venv/
