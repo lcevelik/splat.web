@@ -1,11 +1,35 @@
 [
   {
+    "id": "1778716545865-Sengen Shrine",
+    "filename": "1778716545865-Sengen Shrine.splat",
+    "format": "splat",
+    "sizeGB": 0.14,
+    "originalSizeGB": null,
+    "hasThumb": true
+  },
+  {
+    "id": "1778716817296-The Chase Puddle",
+    "filename": "1778716817296-The Chase Puddle.splat",
+    "format": "splat",
+    "sizeGB": 0.14,
+    "originalSizeGB": null,
+    "hasThumb": true
+  },
+  {
+    "id": "1778716874135-The Burghers of Calais",
+    "filename": "1778716874135-The Burghers of Calais.splat",
+    "format": "splat",
+    "sizeGB": 0.11,
+    "originalSizeGB": null,
+    "hasThumb": true
+  },
+  {
     "id": "2507_shibuya_sdr_pcledit_a9_Daytime_r1",
     "filename": "2507_shibuya_sdr_pcledit_a9_Daytime_r1.splat",
     "format": "splat",
     "sizeGB": 0.04,
     "originalSizeGB": 0.3,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Airplane - T-6 - Rear x a7CR - 2",
@@ -13,7 +37,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.12,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Beach Rocks - 3",
@@ -21,7 +45,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.09,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Beach Stairs 3 V2",
@@ -29,7 +53,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.1,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Beach Stairs 4 v2",
@@ -37,7 +61,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.1,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Canyons - 1",
@@ -45,7 +69,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.09,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Canyons - 2",
@@ -53,7 +77,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.1,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Flower Shop - 2",
@@ -61,7 +85,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.11,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Joshua Trees - 1",
@@ -69,7 +93,7 @@
     "format": "splat",
     "sizeGB": 0.15,
     "originalSizeGB": 1.14,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Joshua Trees - 4",
@@ -77,7 +101,7 @@
     "format": "splat",
     "sizeGB": 0.15,
     "originalSizeGB": 1.14,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Mateo Street Corridor 1",
@@ -85,7 +109,7 @@
     "format": "splat",
     "sizeGB": 0.14,
     "originalSizeGB": 1.09,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "Maydan Market - 2",
@@ -93,7 +117,7 @@
     "format": "splat",
     "sizeGB": 0.13,
     "originalSizeGB": 1.03,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "SD_Lobby",
@@ -101,38 +125,14 @@
     "format": "splat",
     "sizeGB": 0.04,
     "originalSizeGB": 0.29,
-    "hasThumb": false
-  },
-  {
-    "id": "1778716545865-Sengen Shrine",
-    "filename": "1778716545865-Sengen Shrine.splat",
-    "format": "splat",
-    "sizeGB": 0.14,
-    "originalSizeGB": 0.14,
-    "hasThumb": false
-  },
-  {
-    "id": "1778716817296-The Chase Puddle",
-    "filename": "1778716817296-The Chase Puddle.splat",
-    "format": "splat",
-    "sizeGB": 0.14,
-    "originalSizeGB": 0.14,
-    "hasThumb": false
+    "hasThumb": true
   },
   {
     "id": "TestRename",
     "filename": "TestRename.splat",
     "format": "splat",
     "sizeGB": 0.14,
-    "originalSizeGB": 0.14,
-    "hasThumb": false
-  },
-  {
-    "id": "1778716874135-The Burghers of Calais",
-    "filename": "1778716874135-The Burghers of Calais.splat",
-    "format": "splat",
-    "sizeGB": 0.11,
-    "originalSizeGB": 0.11,
-    "hasThumb": false
+    "originalSizeGB": null,
+    "hasThumb": true
   }
 ]

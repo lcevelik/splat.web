@@ -40,7 +40,7 @@ function getFileType(filename: string): SplatFileType | undefined {
 }
 
 export default function SplatViewer({ enableTiltControl = false, enableXR = false }: SplatViewerProps) {
-    const { currentSplat, currentSplatId, currentSplatFormat, setCurrentSplat, setViewMode, isStatic, arShowCameraFeed, isARActive, setIsSplatLoaded } = useStore()
+    const { currentSplat, currentSplatId, currentSplatFormat, setCurrentSplat, setViewMode, arShowCameraFeed, isARActive, setIsSplatLoaded } = useStore()
     const containerRef = useRef<HTMLDivElement>(null)
     const sceneRef = useRef<THREE.Scene | null>(null)
     const rendererRef = useRef<THREE.WebGLRenderer | null>(null)
@@ -73,7 +73,7 @@ export default function SplatViewer({ enableTiltControl = false, enableXR = fals
 
     // Detect if mobile device - AUTO-ENABLE TILT ON MOBILE
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    const shouldEnableTilt = isMobile || enableTiltControl
+    const shouldEnableTilt = enableTiltControl
 
     // React to camera feed toggle during AR - use a large sphere to block camera
     useEffect(() => {
@@ -371,9 +371,8 @@ export default function SplatViewer({ enableTiltControl = false, enableXR = fals
         // Controls
         const controls = new OrbitControls(camera, renderer.domElement)
         controls.enableDamping = true
-        controls.dampingFactor = 0.1
-        controls.rotateSpeed = 0.4
-        // Use slower zoom on mobile for better control
+        controls.dampingFactor = isMobile ? 0.06 : 0.1
+        controls.rotateSpeed = isMobile ? 0.6 : 0.4
         controls.zoomSpeed = isMobile ? MOBILE_ZOOM_SPEED : 0.5
         controls.target.copy(CAMERA_SETTINGS.target)
 

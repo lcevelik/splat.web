@@ -1,3 +1,4 @@
+import React from 'react'
 import { useStore } from '../store'
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
@@ -28,7 +29,6 @@ export default function Gallery() {
         const fetchSplats = async () => {
             try {
                 let data
-                let isStaticMode = false
 
                 try {
                     // Try API first (only really works on localhost)
@@ -42,7 +42,6 @@ export default function Gallery() {
                     const res = await fetch(`${BASE_URL}/splats.json`)
                     if (!res.ok) throw new Error('Failed to load splat manifest')
                     data = await res.json()
-                    isStaticMode = true
                     setIsStatic(true)
                 }
 
@@ -106,7 +105,8 @@ export default function Gallery() {
         <div
             ref={containerRef}
             onScroll={handleScroll}
-            className="p-8 w-full h-full overflow-y-auto bg-everforest-bg-hard"
+            className="p-8 w-full h-full bg-everforest-bg-hard"
+            style={{ overflowY: 'scroll', WebkitOverflowScrolling: 'touch', overscrollBehavior: 'contain' } as React.CSSProperties}
         >
             <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-4">
@@ -150,7 +150,8 @@ export default function Gallery() {
                         }}
                         onClick={(e) => handleSelect(item, e.currentTarget as HTMLDivElement)}
                         className="group relative aspect-video bg-everforest-bg-medium rounded-xl overflow-hidden border-2 border-transparent hover:border-everforest-green cursor-pointer shadow-lg hover:shadow-everforest-green/20 transition-all"
-                        whileHover={{ scale: 1.02 }}
+                        style={{ touchAction: 'pan-y' }}
+                        whileHover={window.matchMedia('(pointer: coarse)').matches ? {} : { scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                     >
                         <img

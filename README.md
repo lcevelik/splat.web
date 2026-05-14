@@ -2,6 +2,8 @@
 
 An interactive 3D Gaussian Splat viewer and gallery manager built with React, TypeScript, Three.js, and Express.js. Upload, convert, view, and manage 3D Gaussian Splats in your browser with automatic format conversion and saved camera views.
 
+**Live at:** https://splat.steadiczech.com/
+
 ## Features
 
 ### Viewer
@@ -54,7 +56,7 @@ npm run server
 npm run dev
 ```
 
-Then open [http://localhost:4010/photo-splat-gallery/](http://localhost:4010/photo-splat-gallery/)
+Then open http://localhost:4010/
 
 ### Configuration
 
@@ -154,6 +156,7 @@ This gallery displays pre-generated 3D Gaussian Splats. To create splats from ph
 - **PLY Conversion Speed:** Large files (1GB+) take 15-30+ seconds to convert (CPU-intensive)
 - **Thumbnails:** Auto-save may fail on some browsers with strict CORS policies
 - **AR on iOS:** WebXR AR not supported in Safari (Apple limitation)
+- **iOS Gyro Mode:** Device tilt control is opt-in only (pass `enableTiltControl` prop); not auto-enabled on mobile to avoid conflicts with touch orbit
 
 ## License
 

@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/photo-splat-gallery/',
+  base: '/',
   server: {
     port: 4010,
     host: true, // Allow LAN access

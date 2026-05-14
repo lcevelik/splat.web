@@ -12,15 +12,16 @@ npm run server
 npm run dev
 ```
 
-Visit: http://localhost:4010/photo-splat-gallery/
+Visit: http://localhost:4010/
 
 ## Architecture Overview
 
 ### Ports & Configuration
-- **Frontend (Vite):** Port 4010 → http://localhost:4010/photo-splat-gallery/
+- **Frontend (Vite):** Port 4010 → http://localhost:4010/
 - **Backend (Express):** Port 4011 → http://localhost:4011
 - **API Proxy:** Vite proxies /api requests to backend
 - **Cache-Control:** no-cache headers to prevent stale manifest issues
+- **Production:** https://splat.steadiczech.com/ (Apache reverse proxy + systemd service splat-backend.service)
 
 ### Key Flows
 
@@ -143,6 +144,15 @@ When renaming or managing splats, always check multiple extensions:
 **Debug:** Check server logs for conversion errors  
 **Check:** Is convert_ply_to_splat.cjs in scripts/ folder?  
 **Verify:** Do files exist in public/splats/? Compare with splats.json
+
+### iOS Scroll (Fixed)
+**Status:** Fixed — added `touchAction: 'pan-y'` to gallery cards
+**Root cause:** framer-motion sets `touch-action: none` on elements with gesture handlers, which kills iOS momentum scrolling
+
+### iOS Viewer Controls (Fixed)
+**Status:** Fixed — gyro tilt no longer auto-activates on mobile
+**Root cause:** `shouldEnableTilt` was `isMobile || enableTiltControl`, causing gyro and OrbitControls to fight each frame
+**Current behavior:** OrbitControls handles all touch (one-finger orbit, pinch zoom). Tilt only activates when `enableTiltControl` prop is explicitly passed.
 
 ## Testing Checklist
 
